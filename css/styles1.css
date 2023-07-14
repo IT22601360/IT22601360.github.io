@@ -1,0 +1,1401 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+html{
+    display: contents;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: 1s background-color ease-in-out, 1s color ease-in-out,
+    1s opacity ease-in-out;
+    margin: 0 0 0 0 ;
+    padding: 0;
+
+}
+
+body{
+    display:contents;
+    background-color: var(--clr-back);
+    margin: 0;
+    padding: 0;
+    color: var(--clr-black);
+
+}
+
+:root{
+    --clr-blue: #021E86;
+    --clr-back: whitesmoke;
+    --clr-black: #212121;
+    --clr-gray: #e1e1e1;
+    --clr-dark-gray: #464545;
+    --ms-padding: 1rem;
+
+}
+
+
+
+.logo{
+    width: 150px;
+
+    
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Center horizontally */
+    padding: 2rem 1rem 3rem 1rem;
+
+
+}
+
+
+.menu-bar{
+    display: none;
+
+}
+
+.bar_button svg{
+    display: flex;
+
+
+}
+
+
+
+.hero{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.astro-and-hello{
+    display: flex;
+    margin: 0;
+    flex-direction:row ;
+    flex-wrap:wrap;
+}
+
+
+
+.hero-name{
+    padding: 10px 15px;
+    align-self:first baseline;
+    margin-top: 1.5rem;
+}
+
+.name{
+    font-size: 3.5rem;
+    margin: 0.5rem 0;
+}
+
+.hello{
+    --fs-hello : clamp(1.5rem , 6vw, 2rem);
+    font-size: var(--fs-hello);
+    margin: 0;
+    align-self: center; /* Align text at the bottom */
+}
+
+
+.post{
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--clr-blue);
+
+}
+
+.button-explore {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 3rem 0;
+}
+
+.explore-a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0.4em 0.6em;
+    background-color: var(--clr-blue);
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+
+.prof-image{
+    position: relative;
+    width: 12em;
+    overflow: clip;
+
+}
+
+.blob{
+    position: absolute;
+    align-self: flex-end; /* Align text at the bottom */
+    margin-bottom: -3rem;
+}
+
+.blob-img{
+    width: 15em;
+}
+.hero-image{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 3rem ;
+}
+
+
+@media (min-width: 768px){
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 1rem 3rem 1rem;
+    }
+    
+    .logo-cont {
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu-bar {
+        display: none;
+    }
+    
+    .menu-set {
+        gap: 1rem;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu-item,
+    .menu-item-contact {
+        color: black;
+        text-decoration: none;
+    }
+
+
+    li{
+        text-decoration: none;
+        list-style: none;
+    }
+
+
+
+    .menu-item {
+        position: relative;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: grey;
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 5px 10px;
+    }
+    .menu-item:before,
+    .menu-item:after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0;
+        background-color:#021E86;
+        transition: 0.5s;
+    }
+    .menu-item:after {
+        left: 0;
+        bottom: -5px;
+    }
+    .menu-item:before {
+        right: 0;
+        top: -5px;
+    }
+    .menu-item:hover {
+        color: var(--clr-blue);
+        transition: 0.5s;
+
+    }
+    .menu-item:hover:after,
+    .menu-item:hover:before {
+        width: 100%;
+    }
+    
+    .menu-item-contact{
+        background-color: #021E86;
+        border-radius: 0.7rem;
+        padding: 0.7em;
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+    }
+
+  
+}
+
+.container-about {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto; /* Centers the div horizontally */
+    margin-top: -10px; /* Adds margin at the bottom */
+    
+  }
+  
+
+h3{
+    font-size: 1.8rem;
+    color: var(--clr-black);
+}
+
+.about-heading{
+    text-align: center;
+    margin: 0.5rem;
+    color: var(--clr-black);
+
+}
+
+.about-des{
+    font-size: 1.125rem;
+    padding:0 1rem 1rem 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--clr-black);
+    
+}
+
+.exploring{
+    font-size: 1.3rem;
+    color: rgb(146, 145, 145);
+    text-align: center;
+    margin: 0;
+
+}
+
+.skills {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+}
+
+.container-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.design-container,
+.dev-container,
+.full-container {
+    flex: 0 1 300px;
+}
+
+@media (max-width: 877px) {
+    .container-skills {
+        justify-content: center;
+    }
+
+    .design-container,
+    .dev-container,
+    .full-container {
+        flex-basis: calc(100% - 2rem);
+    }
+}
+
+.full-container {
+    grid-column: span 2; /* Spanning the entire 2nd row */
+}
+
+.dev-des,
+.design-des,
+.full-des {
+    margin: 0;
+}
+
+.design-container,
+.dev-container,
+.full-container {
+    background-color: var(--clr-gray);
+    text-align: center;
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.design,
+.dev,
+.full {
+    margin: 1rem;
+}
+
+@media (min-width: 878px) and (max-width: 1000px) {
+    .container-skills {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    .full-container {
+        margin: auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1001px) {
+    .container-skills {
+        display: flex;
+        flex: 1;
+    }
+
+    .full-container {
+        grid-column: auto; /* Resetting column span */
+    }
+
+    .innerText1 {
+        font-size: 50rem;
+    }
+}
+
+@media (max-width: 877px) {
+    .container-skills {
+        grid-template-columns: 1fr;
+    }
+
+    .design-container,
+    .dev-container,
+    .full-container {
+        grid-column: auto;
+    }
+}
+
+.parallax-one {
+    overflow: hidden; 
+    position: relative; 
+    display: grid;
+
+    width: 63.1vw; 
+    aspect-ratio: 1882 / 1220;
+    border-radius: 0.2rem;
+    background-image: url(../images/lapback2.jpg);
+    background-attachment: fixed; 
+    background-size: cover; 
+    -moz-background-size: cover; 
+    -webkit-background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; /* Center the background image */
+    z-index: 1;
+}
+
+.inside-box {
+    position: relative;
+    width: 100%;
+}
+
+.imge-lap {
+    width: 80vw;
+    position: absolute;
+    z-index: 2; 
+    margin: 0 auto;/* Set the highest z-index to position it above other elements */
+    margin-top: 0.7rem;
+}
+
+.parallax-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+
+    margin: 0 auto;
+    margin-top: 5rem;
+
+}
+
+.lap-text{
+    text-align: center; 
+    --fs-lap : clamp(1.8rem , 6vw, 8rem);
+    font-size: var(--fs-lap); color: whitesmoke; 
+    font-weight:bolder;
+    margin: auto;
+}
+
+.sec-header {
+    text-align: center;
+    font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    color: var(--clr-gray);
+}
+
+
+.sec-animation {
+    margin-top: 10rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; /* Change width to viewport width */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    overflow: hidden;
+}
+
+.innerText1{
+    position: relative;
+    transform: translateY(-50%);
+    transform: translateX(20%);
+    transition:ease-out 0.7s;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 5rem;
+    color: var(--clr-dark-gray);
+    width: 100%;
+    margin: 0;
+}
+
+.innerText2{
+    position: relative;
+    transform: translateY(-50%);
+    transform: translateX(-15%);
+    transition:ease-out 0.7s;
+    white-space: nowrap;
+    z-index: 1;
+    font-size: 5rem;
+    color: var(--clr-dark-gray);
+    width: 100%;
+    margin: 0;
+}
+
+.bg-black {
+    background-color: #121212;
+    color: var(--clr-gray);
+
+}
+
+.design-container,
+.dev-container,
+.full-container {
+    color: #1C1C1C;
+
+}
+
+
+.projects-heading, .socials-heading{
+    text-align: center;
+    color: var(--clr-gray);
+
+}
+
+.projects-heading{
+    margin-top: 0;
+}
+
+/* CSS */
+.box-image {
+width: 200px;
+position: relative;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 50%;
+display: grid;
+align-items: center;
+justify-content: space-around;
+margin-top: 5rem;
+}
+
+.container-img {
+position: relative;
+height: 250px;
+width: 250px;
+}
+
+.container-img img {
+position: absolute;
+}
+
+.img-2 {
+width: 100%;
+cursor: pointer;
+display: block;
+margin: 0 auto;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.img-1 {
+width: 100%;
+position: absolute;
+transition: 1s;
+transform-origin: center;
+transform: scale(0) rotate(100deg);
+}
+  
+  
+.container-projects-set{
+    display: flex;
+    gap:1em;
+    flex-wrap: wrap;
+    margin: 15px;
+    
+}
+.container-projects{
+    margin-top: -5rem;
+}
+.container-projects-set > *{
+    flex: 1 1 15em;
+}
+
+.proj-1, .proj-2, .proj-3{
+    display: grid;
+    text-align: center;
+    color: black;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.proj-1{
+    background-image: url(../images/apple-store.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.proj-2{
+    background-image: url(../images/Ecommerce-Website.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.proj-3{
+    background-image: url(../images/real-estate.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.proj{
+    color: black;
+    margin-bottom: 0;
+    font-size:2rem;
+}
+.proj-des{
+    font-size:1.25rem;
+    margin-top: 0;
+}
+
+.social-set {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: 1rem;
+
+}
+
+.socials-heading{
+    margin-top: 4rem;
+}
+
+
+a, .social-set > *{
+    color: #e1e1e1;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.social-img {
+    display: block; /* Add this line to override the default inline behavior */
+    width: 30px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.social{
+    display: grid;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.social-des{
+    margin: 0;
+    padding-top: 1rem;
+}
+
+.link-set,.contact-text{
+    text-align: center;
+    color: var(--clr-gray);
+    font-size: 1.8rem;
+}
+
+.footer-section{
+    display: grid;
+
+}
+
+.contact-set{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 1rem;
+}
+
+.other-socials,.email-wa{
+    border: 1px solid var(--clr-gray);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 1.5rem 0 1rem 0;
+}
+.other-socials{
+    margin-top: 0;
+}
+
+.page-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.link-set{
+    margin-bottom: 1rem;
+
+}
+
+.links-a{
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--clr-gray);
+}
+
+hr{
+    margin-top: 1.5rem;
+    width: 90%;
+    color: #464545;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    flex-wrap: wrap;
+}
+
+.copyright-txt {
+    text-align: center;
+    font-size: 0.75em;
+    color: #464545;
+    margin: 0 0 1rem 0;
+}
+
+/* Mobile devices (up to 767px) */
+@media (min-width: 364px) and (max-width: 767px) {
+/* CSS rules for mobile devices */
+    
+}
+
+@media (min-width: 364px) and (max-width: 513px) {
+    /* CSS rules for mobile devices */
+        .container-img{
+            height: 300px;
+            width: 300px;
+        }
+        .blob-img{
+            width: 17em;
+        }
+        .prof-image{
+            position: relative;
+            width: 14em;
+            overflow: clip;
+        
+        }
+        .social-img {
+            width: 50px;
+        }
+    
+        .social-set {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
+        }
+    
+        .gmail, .wa{
+            font-size: 1.25em;
+        }
+    
+        .links-a{
+            padding: 0.5rem;
+            font-size: 1.25rem;
+    
+        }
+        .container-projects{
+            margin-top: -5rem;
+        }
+        .lap-text{
+            --fs-lap: clamp(2rem , 10vw, 8rem);
+        }
+        .nav-bar{
+            padding: 2rem 1rem 3rem 1rem;
+        }
+    }
+
+/*The important part of parallax - fixed size for parallax lap image*/
+@media (min-width: 576px){
+    .nav-bar, .fade{
+        max-width: 560px;
+        margin: 0 auto;
+    }
+    .parallax-one {
+        overflow: hidden; 
+        position: relative; 
+        display: grid;
+        height: 250px;
+        width: 400px; /* Set a fixed width of 500px for the parallax container */
+        border-radius: 0.2rem;
+        background-image: url(../images/lapback2.jpg);
+        background-attachment: fixed; 
+        background-size: cover; 
+        -moz-background-size: cover; 
+        -webkit-background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center; /* Center the background image */
+        z-index: 1;
+    }
+    .lap-text{
+        text-align: center; 
+        font-size: 4rem; color: whitesmoke; 
+        font-weight:bolder;
+        margin: auto;
+    }
+
+    
+    .imge-lap {
+        width: 500px;
+        position: absolute;
+        z-index: 2; 
+        margin: 0 auto;/* Set the highest z-index to position it above other elements */
+        margin-top: 0.7rem;
+    }
+    
+    .parallax-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+    
+        margin: 0 auto;
+        margin-top: 5rem;
+    
+    }
+
+    .sec-animation{
+        margin-top: 15rem;
+    }
+
+    .innerText1, .innerText2{
+        font-size: 8rem;
+    }
+    .container-img{
+        height: 500px;
+        width: 500px;
+    }
+    .box-image{
+        margin-top: 14rem;
+    }
+    .nav-bar{
+        padding: 2rem 1rem 3rem 1rem;
+    }
+
+
+
+}
+
+/* Tablets and small desktops (768px - 991px) */
+@media (min-width: 513px) and (max-width: 767px) {
+/* CSS rules for tablets and small desktops */
+    .social-img {
+        width: 50px;
+    }
+
+    .social-set {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
+    }
+
+    .gmail, .wa{
+        font-size: 1.25em;
+    }
+
+    .links-a{
+        padding: 0.5rem;
+        font-size: 1.25rem;
+
+    }
+
+    .parallax-one{
+        margin-top: -0.75em;
+    }
+
+    .innerText1, .innerText2{
+        font-size: 6rem;
+    }
+    .container-img{
+        height: 400px;
+        width: 400px;
+    }
+    .box-image{
+        margin-top: 8rem;
+    }
+    .container-projects{
+        margin-top: -7rem;
+    }
+    .blob-img{
+        width: 22em;
+    }
+    .prof-image{
+        position: relative;
+        width: 18em;
+        overflow: clip;
+    
+    }
+    .lap-text{
+        --fs-lap: clamp(2rem , 10vw, 8rem);
+    }
+    .nav-bar{
+        padding: 2rem 1rem 3rem 1rem;
+    }
+
+}
+
+@media (min-width:513px) and (max-width:768){
+        .parallax-one {
+        overflow: hidden; 
+        position: relative; 
+        display: grid;
+    
+        width: 63.1vw; 
+        aspect-ratio: 1882 / 1220;
+        border-radius: 0.2rem;
+        background-image: url(../images/lapback2.jpg);
+        background-attachment: fixed; 
+        background-size: cover; 
+        -moz-background-size: cover; 
+        -webkit-background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center; /* Center the background image */
+        z-index: 1;
+    }
+
+    
+    .imge-lap {
+        width: 430px;
+        position: absolute;
+        z-index: 2; 
+        margin: 0 auto;/* Set the highest z-index to position it above other elements */
+        margin-top: 0.7rem;
+    }
+    
+    .parallax-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+    
+        margin: 0 auto;
+        margin-top: 5rem;
+    
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+        .social-img {
+            width: 50px;
+        }
+    
+        .social-set {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
+        }
+    
+        .gmail, .wa{
+            font-size: 1.25em;
+        }
+    
+        .links-a{
+            padding: 0.5rem;
+            font-size: 1.25rem;
+    
+        }
+    
+        .parallax-one{
+            margin-top: -0.75em;
+        }
+    
+        .innerText1, .innerText2{
+            font-size: 9rem;
+        }
+        .sec-animation{
+            margin-top: 14rem;
+        }
+        .sec-header{
+            font-size: 1.5rem;
+        }
+
+        .container-img{
+            height: 500px;
+            width: 500px;
+        }
+        .box-image{
+            margin-top: 8rem;
+        }
+        .container-projects{
+            margin-top: -7rem;
+        }
+        .blob-img{
+            width: 22em;
+        }
+        .prof-image{
+            position: relative;
+            width: 18em;
+            overflow: clip;
+        
+        }
+        .nav-bar, .fade{
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .nav-bar{
+            padding: 2rem 1rem 3rem 1rem;
+        }
+        .logo{
+            height: 40px;
+            width: auto;
+        }
+        .bar_button svg{
+            height: 40px;
+            width: auto;
+        }
+        .footer-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+        .contact-set{
+            align-items: flex-start;
+            margin: 0;
+        }
+        .contact-text{
+            font-size: 2.5rem;
+        }
+        .page-links{
+            margin-left: 10rem;
+            align-items: flex-start;
+        }
+        .social-set, .container-projects-set{
+            margin-bottom: 8rem;
+        }
+        #parallax-lap-image{
+            margin-top: 10rem;
+        }
+        .parallax-one {
+            overflow: hidden; 
+            position: relative; 
+            display: grid;
+            height: 310px;
+            width: 480px; /* Set a fixed width of 500px for the parallax container */
+            border-radius: 0.2rem;
+            background-image: url(../images/lapback2.jpg);
+            background-attachment: fixed; 
+            background-size: cover; 
+            -moz-background-size: cover; 
+            -webkit-background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; /* Center the background image */
+            z-index: 1;
+        }
+        .lap-text{
+            text-align: center; 
+            font-size: 4rem; color: whitesmoke; 
+            font-weight:bolder;
+            margin: auto;
+        }
+    
+        
+        .imge-lap {
+            width: 600px;
+            position: absolute;
+            z-index: 2; 
+            margin: 0 auto;/* Set the highest z-index to position it above other elements */
+            margin-top: 0.7rem;
+        }
+        
+        .parallax-border {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70vw;
+        
+            margin: 0 auto;
+            margin-top: 5rem;
+        
+        }
+    }
+
+/* Medium desktops (992px - 1199px) */
+@media (min-width: 991px) and (max-width: 1199px) {
+/* CSS rules for medium desktops */
+        .hero{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }        
+        .blob-img{
+            width: 18em;
+        }
+        .prof-image{
+            position: relative;
+            width: 15em;
+            overflow: clip;
+            
+        
+        }
+        .hero-name, .hero-image{
+            margin-top: 0;
+        }
+        .hero-image{
+            margin-right: 50px;
+        }
+
+        .skills{
+            margin-top: 6rem;
+        }
+        .container-skills{
+            gap: 3rem;
+        }
+
+        .button-explore{
+            margin: 2rem 0 2rem 0;
+            align-items: flex-start;
+            justify-content: left;
+        }
+        .hero-name{
+            align-self:center;
+        }
+        .social-img {
+            width: 50px;
+        }
+    
+        .social-set {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
+        }
+    
+        .gmail, .wa{
+            font-size: 1.25em;
+        }
+    
+        .links-a{
+            padding: 0.5rem;
+            font-size: 1.25rem;
+    
+        }
+    
+        .parallax-one{
+            margin-top: -0.75em;
+        }
+    
+        .innerText1, .innerText2{
+            font-size: 12rem;
+        }
+        .sec-animation{
+            margin-top: 18rem;
+        }
+        .sec-header{
+            font-size: 1.5rem;
+        }
+
+        .container-img{
+            height: 700px;
+            width: 700px;
+        }
+        .box-image{
+            margin-top: 14rem;
+        }
+        .container-projects{
+            margin-top: -7rem;
+        }
+
+        .nav-bar, .fade{
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .nav-bar{
+            padding: 2rem 1rem 3rem 1rem;
+        }
+        .logo{
+            height: 40px;
+            width: auto;
+        }
+        .bar_button svg{
+            height: 40px;
+            width: auto;
+        }
+        .footer-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+        .contact-set{
+            align-items: flex-start;
+            margin: 0;
+        }
+        .contact-text{
+            font-size: 2.5rem;
+        }
+        .page-links{
+            margin-left: 18rem;
+            align-items: flex-start;
+        }
+        .social-set, .container-projects-set{
+            margin-bottom: 8rem;
+        }
+        #parallax-lap-image{
+            margin-top: 10rem;
+        }
+        .parallax-one {
+            overflow: hidden; 
+            position: relative; 
+            display: grid;
+            height: 420px;
+            width: 635px; /* Set a fixed width of 500px for the parallax container */
+            border-radius: 0.2rem;
+            background-image: url(../images/lapback2.jpg);
+            background-attachment: fixed; 
+            background-size: cover; 
+            -moz-background-size: cover; 
+            -webkit-background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; /* Center the background image */
+            z-index: 1;
+        }
+        .lap-text{
+            text-align: center; 
+            font-size: 6rem; color: whitesmoke; 
+            font-weight:bolder;
+            margin: auto;
+        }
+    
+        
+        .imge-lap {
+            width: 800px;
+            position: absolute;
+            z-index: 2; 
+            margin: 0 auto;/* Set the highest z-index to position it above other elements */
+            margin-top: 0.7rem;
+        }
+        
+        .parallax-border {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70vw;
+        
+            margin: 0 auto;
+            margin-top: 5rem;
+        
+        }
+
+}
+
+/* Large desktops and above (1200px and beyond) */
+@media (min-width: 1199px) {
+
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+    }        
+    .blob-img{
+        width: 22em;
+    }
+    .prof-image{
+        position: relative;
+        width: 18em;
+        overflow: clip;
+        
+    
+    }
+    .hero-name, .hero-image{
+        margin-top: 0;
+    }
+    .hero-image{
+        margin-right: 50px;
+    }
+
+    .skills{
+        margin-top: 6rem;
+    }
+    .container-skills{
+        gap: 2rem;
+        justify-content: space-between;
+
+    }
+    .design-container, .dev-container, .full-container {
+        flex: 0 1 355px;
+    }
+
+    .button-explore{
+        margin: 2rem 0 2rem 0;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    .hero-name{
+        align-self:center;
+    }
+    .social-img {
+        width: 50px;
+    }
+
+    .social-set {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    
+    }
+
+    .gmail, .wa{
+        font-size: 1.25em;
+    }
+
+    .links-a{
+        padding: 0.5rem;
+        font-size: 1.25rem;
+
+    }
+
+    .parallax-one{
+        margin-top: -0.75em;
+    }
+
+    .innerText1, .innerText2{
+        font-size: 18rem;
+    }
+    .sec-animation{
+        margin-top: 25rem;
+    }
+    .sec-header{
+        font-size: 1.5rem;
+    }
+    .name{
+        font-size: 5rem;
+    }
+    .post{
+        font-size: 3.5rem;
+    }
+
+    .container-img{
+        height: 700px;
+        width: 700px;
+    }
+    .box-image{
+        margin-top: 14rem;
+    }
+    .container-projects{
+        margin-top: -7rem;
+    }
+
+    .nav-bar, .fade{
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 1rem 3rem 1rem;
+    }
+    
+    .menu-bar {
+        display: block;
+        margin-left: auto; /* Add this line to push the menu bar to the right corner */
+    }
+    .logo{
+        height: 40px;
+        width: auto;
+    }
+    .bar_button svg{
+        display: none;
+    }
+    .footer-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-set{
+        align-items: flex-start;
+        margin: 0;
+    }
+    .contact-text{
+        font-size: 2.5rem;
+    }
+    .page-links{
+        margin-left: 18rem;
+        align-items: flex-start;
+    }
+    .social-set, .container-projects-set{
+        margin-bottom: 8rem;
+    }
+    #parallax-lap-image{
+        margin-top: 10rem;
+    }
+    .parallax-one {
+        overflow: hidden; 
+        position: relative; 
+        display: grid;
+        height: 510px;
+        width: 748px; /* Set a fixed width of 500px for the parallax container */
+        border-radius: 0.2rem;
+        background-image: url(../images/lapback2.jpg);
+        background-attachment: fixed; 
+        background-size: cover; 
+        -moz-background-size: cover; 
+        -webkit-background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center; /* Center the background image */
+        z-index: 1;
+    }
+    .lap-text{
+        text-align: center; 
+        font-size: 7rem; color: whitesmoke; 
+        font-weight:bolder;
+        margin: auto;
+    }
+
+    
+    .imge-lap {
+        width: 950px;
+        position: absolute;
+        z-index: 2; 
+        margin: 0 auto;/* Set the highest z-index to position it above other elements */
+        margin-top: 0.7rem;
+    }
+    
+    .parallax-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        margin: 0 auto;
+        margin-top: 5rem;
+    
+    }
+
+}
+  
