@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HimasCode | Haritha Himansha | Front-End Web Developer & Designer in Sri Lanka</title>
+
+        <link rel="stylesheet" type="text/css" href="../css/styles1.css">
+        <script src="../js/script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+       <nav class="nav-bar">
+            <div class="logo-cont">
+                <img src="../logo/logo.png" alt="logo" class="logo">
+            </div>
+            
+            <div class="menu-bar">
+                <ul class="menu-set">
+                    <li><a href="#container-about" class="menu-item">About</a></li>
+                    <li><a href="#projects" class="menu-item">Projects</a></li>
+                    <li><a href="#socials" class="menu-item">Socials</a></li>
+                    <li><a href="#contact" class="menu-item-contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="bar_button">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewBox="0 0 50 50" class="bar_button">
+                    <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+                </svg>
+            </div>
+        </nav>
+    
+        <script src="../js/script.js"></script>
+
+        <main class="fade">
+            <div class="hero">
+                <div class="hero-name">
+                    <div class="astro-and-hello">
+                        <p class="hello">Hello world. I am</p>
+                        
+                    </div>
+                    <div class="name-and-post">
+                        <h1 class="name">Haritha Himansha</h1>
+                        <h3 class="post">Front-End Developer</h3>
+                    </div>
+                    <div class="button-explore">
+                        <a href="#container-about" class="explore-a">Explore &#8642;</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="blob">
+                        <img src="../images/blob.png" alt="" class="blob-img">
+                    </div>
+                    <img src="../images/profImage.png" alt="profile image" class="prof-image" >
+    
+                </div>
+            </div>
+    
+            <div class="container-about" id="container-about">
+                <h3 class="about-heading">Who am I?</h3>
+                <p class="about-des">
+                    A creative person who can add beauty to an idea and make that idea into a reality. I help to my clients with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
+                </p>
+                <p class="exploring">Always Exploring...</p>
+            </div>
+    
+            <h3 class="skills" id="skills">I can help you with...</h3>
+            <div class="container-skills">
+                <div class="design-container">
+                    <img src="../images/icons/design11.png" alt="" class="design-img">
+                    <h3 class="design">Design</h3>
+                    <p class="design-des">With a solid track record in designing websites, I deliver strong and user-friendly digital designs. Solid company branding is the foundation of any successful website.</p>
+                </div>
+                <div class="dev-container">
+                    <img src="../images/icons/code11.png" alt="" class="design-img">
+                    <h3 class="dev">Development</h3>
+                    <p class="dev-des">Convert design into implementation. I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction.</p>
+                </div>
+                <div class="full-container">
+                    <img src="../images/icons/full11.png" alt="" class="design-img">
+                    <h3 class="full">Full package</h3>
+                    <p class="full-des">A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.</p>
+                </div>
+            </div>
+            
+            
+
+            <section id="parallax-lap-image">
+                <div class="parallax-border">
+                    <div class="parallax-one">
+                        <h1 class="lap-text">DESIGN<br>DEVELOP<br>DELIVER</h1>
+                    </div>
+                    <img src="../images/macbook.png" alt="" class="imge-lap">
+                </div>
+
+            </section>
+
+           
+            <section id="secondSection">
+
+                <h3 class="sec-header">
+                    Unlock the power of captivating front-end design, where your website's quality speaks volumes and leaves a lasting impression
+                </h3>
+
+                <section class="sec-animation">
+                    <h2 class="innerText1">CREATIVE</h2><br>
+                    <h2 class="innerText2">EXPLORER</h2>
+                </section>
+                
+                <script>
+                    window.addEventListener('scroll', function() {
+                      let section = document.querySelector('section');
+                      let text = document.querySelector('.outText');
+                      let innerText1 = document.querySelector('.innerText1');
+                      let innerText2 = document.querySelector('.innerText2');
+                      let value = window.scrollY;
+                  
+                      // Define a threshold value
+                      let threshold = 10; // Adjust this value to set the desired threshold
+                  
+                      if (value > threshold) {
+                        innerText1.style.left = 0 - (value - threshold) / 100 + '%';
+                        innerText2.style.left = (value - threshold) / 100 + '%';
+                      } else {
+                        // Reset the positions when below the threshold
+                        innerText1.style.left = '0';
+                        innerText2.style.left = '0';
+                      }
+                    });
+                </script>
+                  
+                
+                <div class="box-image" id="boxImage">
+                    <div class="container-img">
+                    <img src="../images/stack-set.png" alt="Image 1" class="img-1">
+                    <img src="../logo/logo2.1w.png" alt="Image 2" class="img-2">
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                    let target = document.querySelector("#boxImage");
+                    let img1 = document.querySelector(".img-1");
+                    let options = {
+                        threshold: 0.5 // Adjust the threshold value as needed
+                    };
+                    let callback = (entries, observer) => {
+                        entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            img1.style.transform = "scale(1)";
+                        } else {
+                            img1.style.transform = "scale(0) rotate(100deg)";
+                        }
+                        });
+                    };
+                    let observer = new IntersectionObserver(callback, options);
+                    observer.observe(target);
+                    });
+                </script>
+                
+                <div class="container-projects" id="container-projects">
+                    <h3 class="projects-heading" id="projects">Projects</h3>
+                    <div class="container-projects-set">
+                        <div class="proj-1">
+                            <h3 class="proj">Apple V2.0</h3>
+                            <p class="proj-des">Clone project of Apple.com</p>
+                        </div>
+                        <div class="proj-2">
+                            <h3 class="proj">HimaStore</h3>
+                            <p class="proj-des">Online Store</p>
+                        </div>
+
+                        <div class="proj-3">
+                            <h3 class="proj">Hima Real Estate</h3>
+                            <p class="proj-des">Real Estate Website</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <h3 class="socials-heading" id="socials">Socials</h3>
+                <div class="container-socials">
+                    <div class="social-set">
+                        <div class="social">
+                            <a href="https://github.com/IT22601360" target="_blank">
+                                <img src="../images/icons/githubw.png" alt="" class="social-img">
+                                <p class="social-des">GitHub</p>
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://stackoverflow.com/users/19619549/haritha-himansha" target="_blank">
+                                <img src="../images/icons/stackof.png" alt="" class="social-img">
+                                <p class="social-des">Stackoverflow</p>
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/harithahimansha/" target="_blank">
+                                <img src="../images/icons/in.png" alt="" class="social-img">
+                                <p class="social-des">LinkedIn</p>
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="https://codepen.io/Haritha-Himansha" target="_blank">
+                                <img src="../images/icons/codepen2.png" alt="" class="social-img">
+                                <p class="social-des">Codepen</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <footer>
+                    <div class="footer-section" id="contact">
+                        <div class="contact-set">
+                            <div class="contact-text">Let's work together</div>
+                            <div class="email-wa"><a href="" class="gmail">himansha.official@gmail.com</a></div>
+                            <div class="other-socials"><a href="https://api.whatsapp.com/send/?phone=94723941066&text&type=phone_number&app_absent=0" class="wa" target="_blank">+94-723-941-066</a></div>
+                        </div>
+
+                        <div class="page-links">
+                            <div class="link-set">Links</div>
+                            <a href="#container-about" class="links-a">About</a>
+                            <a href="#projects" class="links-a">Projects</a>
+                            <a href="#socials" class="links-a">Social</a>
+                            <a href="#contact" class="links-a">Contact</a>
+                        </div>
+                    </div>
+
+                    
+
+
+                </footer>
+
+
+            </section>
+            
+        </main>
+        <hr><br>
+        <div class="copyright">
+            
+            <p class="copyright-txt">2023 All Rights Reserved</p>
+            <p class="copyright-txt">website by Haritha Himansha</p>
+
+        </div>
+    </body>
+</html>
+
+
