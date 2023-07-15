@@ -36,7 +36,63 @@
                 </svg>
             </div>
         </nav>
-    
+        
+        <!--mobile-navigation-->
+            <div class="mobile-nav">
+                <nav>
+                    <ul class="mobile-nav-menu">
+                        <li>
+                            <a href="#container-about" class="mobile-nav-link">About</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="mobile-nav-link">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#socials" class="mobile-nav-link">Social</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="mobile-nav-link-btn">Contact</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <script>
+                const mobileNav = () => {
+                const headerBtn = document.querySelector('.bar_button');
+                const mobileNav = document.querySelector('.mobile-nav');
+                const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-link-btn');
+
+                let isMobileViewOpen = false;
+
+                headerBtn.addEventListener('click', () => {
+                    isMobileViewOpen = !isMobileViewOpen;
+
+                    if (isMobileViewOpen) {
+                    mobileNav.style.display = 'flex';
+                    } else {
+                    mobileNav.style.display = 'none';
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                    isMobileViewOpen = false;
+                    mobileNav.style.display = 'none';
+                    });
+                });
+                };
+
+                mobileNav();
+
+
+
+            </script>
+
+
+        <!--mobile-navigation-end-->
+
         <script src="../js/script.js"></script>
 
         <main class="fade">
@@ -114,6 +170,7 @@
                     <h2 class="innerText2">EXPLORER</h2>
                 </section>
                 
+
                   
                 
                 <div class="box-image" id="boxImage">
@@ -123,6 +180,7 @@
                     </div>
                 </div>
 
+                
                 <div class="container-projects" id="container-projects">
                     <h3 class="projects-heading" id="projects">Projects</h3>
                     <div class="container-projects-set">
