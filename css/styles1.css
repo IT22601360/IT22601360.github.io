@@ -49,7 +49,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between; /* Center horizontally */
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
 
 
 }
@@ -62,10 +62,48 @@ body{
 
 .bar_button svg{
     display: flex;
-
+    cursor: pointer;
 
 }
+.mobile-nav{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5rem ;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    box-shadow: rgba(0, 0, 0, 0.15) 10px 25px 25px;
+    z-index: 999;
+  
 
+}
+.mobile-nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+
+}
+.mobile-nav-link{
+    color: var(--clr-black);
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 1rem;
+}
+.mobile-nav-link-btn{
+    background-color: var(--clr-blue);
+    padding: 0.75em;
+    font-size: 1.125rem;
+    margin-top: 5rem;
+    border-radius: 13px;
+    font-weight: 600;
+    color: white;
+}
 
 
 .hero{
@@ -157,7 +195,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2rem 1rem 3rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
     }
     
     .logo-cont {
@@ -696,11 +734,7 @@ hr{
     margin: 0 0 1rem 0;
 }
 
-/* Mobile devices (up to 767px) */
-@media (min-width: 364px) and (max-width: 767px) {
-/* CSS rules for mobile devices */
-    
-}
+
 
 @media (min-width: 364px) and (max-width: 513px) {
     /* CSS rules for mobile devices */
@@ -741,7 +775,7 @@ hr{
             --fs-lap: clamp(2rem , 10vw, 8rem);
         }
         .nav-bar{
-            padding: 2rem 1rem 3rem 1rem;
+            padding: 2rem 1rem 2rem 1rem;
         }
     }
 
@@ -809,7 +843,7 @@ hr{
         margin-top: 14rem;
     }
     .nav-bar{
-        padding: 2rem 1rem 3rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
     }
 
 
@@ -867,7 +901,7 @@ hr{
         --fs-lap: clamp(2rem , 10vw, 8rem);
     }
     .nav-bar{
-        padding: 2rem 1rem 3rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
     }
 
 }
@@ -971,7 +1005,7 @@ hr{
             margin: 0 auto;
         }
         .nav-bar{
-            padding: 2rem 1rem 3rem 1rem;
+            padding: 2rem 1rem 2rem 1rem;
         }
         .logo{
             height: 40px;
@@ -1136,7 +1170,7 @@ hr{
             margin: 0 auto;
         }
         .nav-bar{
-            padding: 2rem 1rem 3rem 1rem;
+            padding: 2rem 1rem 2rem 1rem;
         }
         .logo{
             height: 40px;
@@ -1318,7 +1352,7 @@ hr{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2rem 1rem 3rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
     }
     
     .menu-bar {
